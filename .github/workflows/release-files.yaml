@@ -19,7 +19,7 @@ jobs:
 
       - name: Create Release Branch
         run: |
-          local branch_name=release-${{ github.ref_name }}
+          branch_name=release-${{ github.ref_name }}
           git checkout -b ${branch_name}
           git remote add local ${{ github.server_url }}/${{ github.repository }}
           git push --set-upstream local ${branch_name}
