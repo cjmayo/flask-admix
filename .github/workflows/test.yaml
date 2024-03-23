@@ -54,6 +54,8 @@ jobs:
           sudo apt-get install -y libgeos-c1v5
       - name: Check out repository code
         uses: actions/checkout@v4
+        with:
+          show-progress: false
       - name: Set up PostgreSQL hstore module
         env:
           PGPASSWORD: postgres
@@ -84,6 +86,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+        with:
+          show-progress: false
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -103,6 +107,8 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          show-progress: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
